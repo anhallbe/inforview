@@ -1,0 +1,29 @@
+{
+	"name": "inforview",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack --display-error-details",
+		"start": "webpack-dev-server --content-base web/ --inline --colors",
+		"lint": "tslint -p ."
+	},
+	"author": "Andreas Hallberg <andreas.hallberg@infor.com>",
+	"private": true,
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"@types/angular": "~1.6.5",
+		"@types/chart.js": "2.6.1",
+		"angular": "~1.6.5",
+		"angular-chart.js": "~1.1.1",
+		"chart.js": "~2.6.0",
+		"file-loader": "~0.11.2",
+		"html-webpack-plugin": "~2.30.1",
+		"ts-loader": "~2.3.2",
+		"tslint": "^5.8.0",
+		"typescript": "~2.4.2",
+		"webpack": "~3.4.1",
+		"webpack-dev-server": "~2.6.1"
+	},
+	"dependencies": {}
+}

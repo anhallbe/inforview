@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "typeRoots": [
+            "node_modules/@types",
+            "src/types"
+        ],
+        "types": [
+            "angular",
+            "scb",
+            "chart.js"
+        ],
+        "lib": [
+            "es5",
+            "dom",
+            "es2015.iterable"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
