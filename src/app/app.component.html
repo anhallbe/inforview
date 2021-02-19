@@ -1,19 +1,18 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1>A year in stats</h1>
-    <p>
-      Swedish statistics from
-      <select [ngModel]="selectedYear" (ngModelChange)="onYearChanged()">
-        <option *ngFor="let year of availableYears" [value]="year">{{year}}</option>
-      </select>
-      visualized
-    </p>
-  </div>
+<div class="container-fluid bg-light p-5">
+  <h1>A year in stats</h1>
+  <p>
+    Swedish statistics from
+    <select [ngModel]="selectedYear" (ngModelChange)="onYearChanged($event)">
+      <option *ngFor="let year of availableYears" [value]="year">{{year}}</option>
+    </select>
+    visualized
+  </p>
 </div>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <app-stat-simple [value]="peopleTotal | number" description="people alive"></app-stat-simple>
-    <app-stat-chart [data]="genderData" [labels]="genderLabels" description="gender distribution" type="pie">
+    <app-stat-simple class="col-sm" [value]="peopleTotal | number" description="people alive"></app-stat-simple>
+    <app-stat-chart class="col-sm" [data]="genderData" [labels]="genderLabels" description="gender distribution"
+      type="pie">
     </app-stat-chart>
   </div>
 </div>

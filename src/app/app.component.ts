@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CountyPopulationData, SCBService } from './scb.service';
 
-const YEARS = [2015, 2010, 2005, 2000, 1995, 1990, 1985, 1980, 1975, 1970];
+const YEARS = [2019, 2015, 2010, 2005, 2000, 1995, 1990, 1985, 1980, 1975, 1970];
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -55,7 +55,8 @@ export class AppComponent {
     });
   }
 
-  onYearChanged(): void {
+  onYearChanged(year: number): void {
+    this.selectedYear = year;
     console.log('Selected year:', this.selectedYear);
     this.fetchData(this.selectedYear);
   }
