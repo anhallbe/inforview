@@ -12,8 +12,8 @@
 </div>
 <div class="container-fluid">
   <div class="row">
-    <stat-simple [value]="peopleTotal | number" description="people alive"></stat-simple>
-    <stat-chart [data]="genderData" [labels]="genderLabels" description="gender distribution" type="pie">
-    </stat-chart>
+    <app-stat-simple [value]="peopleTotal | number" description="people alive"></app-stat-simple>
+    <app-stat-chart [data]="genderData" [labels]="genderLabels" description="gender distribution" type="pie">
+    </app-stat-chart>
   </div>
 </div>

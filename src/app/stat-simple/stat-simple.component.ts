@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'stat-simple',
+  selector: 'app-stat-simple',
   templateUrl: './stat-simple.component.html',
   styleUrls: ['./stat-simple.component.scss']
 })

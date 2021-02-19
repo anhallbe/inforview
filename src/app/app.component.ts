@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CountyPopulationData, SCBService } from "./scb.service";
+import { CountyPopulationData, SCBService } from './scb.service';
 
 const YEARS = [2015, 2010, 2005, 2000, 1995, 1990, 1985, 1980, 1975, 1970];
 @Component({
@@ -11,12 +11,12 @@ export class AppComponent {
   selectedYear: number = YEARS[0];
   availableYears: number[] = YEARS;
 
-  peopleTotal: number = 0;
-  peopleBorn: number = 0;
-  peopleDead: number = 0;
+  peopleTotal = 0;
+  peopleBorn = 0;
+  peopleDead = 0;
 
   genderData: number[] = [];
-  genderLabels: string[] = ["men", "women"];
+  genderLabels: string[] = ['men', 'women'];
 
   ageData: number[] = [];
   ageLabels: string[] = [];
@@ -28,7 +28,7 @@ export class AppComponent {
     this.fetchData(this.selectedYear);
   }
 
-  private fetchData(year: number) {
+  private fetchData(year: number): void {
     this.scbService.fetchDeaths(year).then(deaths => {
       this.peopleDead = deaths;
     });
@@ -55,10 +55,10 @@ export class AppComponent {
     });
   }
 
-  onYearChanged() {
-    console.log("Selected year:", this.selectedYear);
+  onYearChanged(): void {
+    console.log('Selected year:', this.selectedYear);
     this.fetchData(this.selectedYear);
   }
 }
 
-type SortFn<T> = (a: T, b: T) => number
+type SortFn<T> = (a: T, b: T) => number;
